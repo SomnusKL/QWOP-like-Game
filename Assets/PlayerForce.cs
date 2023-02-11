@@ -29,7 +29,7 @@ public class PlayerForce : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            armleft.AddForce(transform.right*-power, ForceMode2D.Impulse);
+            armleft.AddForce(-transform.right*power, ForceMode2D.Impulse);
             mysource.Play();
         }
         if (Input.GetKeyDown(KeyCode.D))
@@ -39,12 +39,12 @@ public class PlayerForce : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            legleft.AddForce(transform.right*power, ForceMode2D.Impulse);
+            legleft.AddForce(-transform.right*power, ForceMode2D.Impulse);
             mysource.Play();
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
-            legright.AddForce(transform.right*-power, ForceMode2D.Impulse);
+            legright.AddForce(transform.right*power, ForceMode2D.Impulse);
             mysource.Play();
         }
         if (Input.GetKeyDown(KeyCode.Space))
